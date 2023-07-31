@@ -13,7 +13,7 @@ const PORT=process.env.PORT
 
 
 app.use('/api/contact',require('./Routes/Contact'));
-
+app.use('/api/user',require('./Routes/User'));
 
 // la création du serveur
 app.listen(PORT,error=>{

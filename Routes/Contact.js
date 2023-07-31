@@ -44,7 +44,6 @@ router.delete('/:_id',async(req,res)=>{
     }
     catch (error){
         res.status(400).send({msg:'can not delete the contact'})}
-
     })
 
     //Update contact
@@ -58,7 +57,17 @@ router.delete('/:_id',async(req,res)=>{
             res.status(400).send({msg:'can not update this contact'})
         }
     })
+    //get one contact
+router.get('/:_id', async(req,res)=>{
+    try{
+        const contactToGet = await Contact.findOne({_id:req.params._id})
+        res.status(200).send({msg:'cantact getted' ,contactToGet})
+    }catch(error){
+        res.status(400).send({msg:'can not find this contact'})
+    }
+})
 
 
 
-module.exports=router
+
+module.exports=router ;

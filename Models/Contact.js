@@ -15,4 +15,4 @@ const contactSchema = mongoose.Schema({
     },
     phone:Number,
 })
-module.exports=user=mongoose.model('contact',contactSchema)
+module.exports=user=mongoose.model('contact',contactSchema);

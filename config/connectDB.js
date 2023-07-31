@@ -8,4 +8,4 @@ const connectDB =async ()=> {
         console.log("database is not connected")
     }
 }
-module.exports=connectDB
+module.exports=connectDB;
